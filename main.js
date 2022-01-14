@@ -1,5 +1,6 @@
 "use strict"
 
+// loading screen delay
 let delay = 3000; // delay time in milliseconds
 let timeoutId = setTimeout(function () {
     // alert('Welcome to Coffee!');
@@ -8,10 +9,6 @@ let timeoutId = setTimeout(function () {
     let mainPage = document.getElementById("main-page");
     mainPage.className = "d-block container text-center";
 }, delay);
-
-// to cancel the timeout, you can call
-// clearTimeout(timeoutId);
-// prior to the delay expiring
 
 // builds HTML structure of coffee element
 function renderCoffee(coffee) {
@@ -44,7 +41,7 @@ function updateCoffees(e) {
     }
 
     coffees.forEach(function(coffee) {
-        if (coffee.roast === selectedRoast) {
+        if (coffee.roast === selectedRoast) {   // light/ medium/ dark
             filteredCoffees.push(coffee);
         }
     });
@@ -58,7 +55,7 @@ function searchCoffees(e) {
     let searchName = coffeeSearch.value;
     let filteredCoffees = [];
 
-    if (searchName === "") {
+    if (searchName === "") {  // revert to entire list when search input is empty
         tbody.innerHTML = renderCoffees(coffees);
         return;
     }
@@ -78,15 +75,22 @@ function searchCoffees(e) {
     tbody.innerHTML = renderCoffees(filteredCoffees);
 }
 
-// function addCoffee(e){
-//     e.preventDefault();
-//
-//     let currentName = newName.value;
-//     let currentRoast = newRoast.value;
-//     console.log(currentName + " " + currentRoast);
-//
-//     let newCoffee = document.createElement()
-// }
+// add new coffee to list
+function addCoffee(e){
+    e.preventDefault();
+
+    let currentName = newName.value;
+    let currentRoast = newRoast.value;
+    let newCoffee = document.createElement("div");
+
+    let html = '<div class="coffee row">';
+    html += '<h4 class="col">' + currentName + '</h4>';
+    html += '<p class="col">' + currentRoast + '</p>';
+    html += '</div>';
+
+    newCoffee.innerHTML = html;
+    tbody.appendChild(newCoffee);
+}
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
 let coffees = [
