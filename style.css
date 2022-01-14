@@ -2,6 +2,7 @@
     background-image: url("https://media0.giphy.com/media/RiQwP7SRR9kZ1WEfES/giphy.gif");
     background-position: top;
 }
+
 hr{
     height: 5px;
 }
@@ -51,4 +52,8 @@ button {
 
 #add-coffee-name, #adding-roast-selection {
     font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.coffeelist {
+    background-color: whitesmoke;
 }
