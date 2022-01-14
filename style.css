@@ -21,7 +21,7 @@ h1 {
     color: #9C6644;
 }
 
-h2{
+h2, h3, h4{
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
@@ -53,4 +53,3 @@ button {
 #add-coffee-name, #adding-roast-selection {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
-
