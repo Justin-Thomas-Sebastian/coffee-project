@@ -7,14 +7,14 @@ let timeoutId = setTimeout(function () {
     let loading = document.getElementById("loading");
     loading.className = "d-none";
     let mainPage = document.getElementById("main-page");
-    mainPage.className = "d-block container text-center";
+    mainPage.className = "d-block fluid-container text-center";
 }, delay);
 
 // builds HTML structure of coffee element
 function renderCoffee(coffee) {
-    let html = '<div class="coffee row">';
-    html += '<h4 class="col">' + coffee.name + '</h4>';
-    html += '<p class="col">' + coffee.roast + '</p>';
+    let html = '<div class="coffee row coffee-item">';
+    html += '<h4 class="col text-left">' + coffee.name + '</h4>';
+    html += '<p class="col text-right">' + coffee.roast + '</p>';
     html += '</div>';
 
     return html;
@@ -83,9 +83,9 @@ function addCoffee(e){
     let currentRoast = newRoast.value;
     let newCoffee = document.createElement("div");
 
-    let html = '<div class="coffee row">';
-    html += '<h4 class="col">' + currentName + '</h4>';
-    html += '<p class="col">' + currentRoast + '</p>';
+    let html = '<div class="coffee row coffee-item">';
+    html += '<h4 class="col text-left">' + currentName + '</h4>';
+    html += '<p class="col text-right">' + currentRoast + '</p>';
     html += '</div>';
 
     newCoffee.innerHTML = html;

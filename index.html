@@ -23,68 +23,75 @@
 
     <!-- Main -->
     <div class="d-none container text-center" id="main-page">
-        <div class="jumbotron bg-transparent">
+        <div class="jumbotron mt-4">
             <h1>Coffee!</h1>
         </div>
-        <hr>
-        <div class="row justify-content-around">
-            <div class="col-lg-4 col-xs-4">  <!-- col that holds search and add-->
 
-                <!-- Choosing a Coffee Section -->
-                <div>
-                    <form>
-                        <div id="searchbar" class="py-2 px-3">
-                            <label for="roast-selection"></label>
-                            <select id="roast-selection" class="form-control mb-3">
-                                <option value="all">All</option>
-                                <option value="light">Light</option>
-                                <option value="medium">Medium</option>
-                                <option value="dark">Dark</option>
-                            </select>
-                            <label for="search-field"></label>
-                            <input id="search-field" class="form-control mb-3" type="text" placeholder="Search..." name="search-field">
-                            <input id="submit" type="submit" class="form-control mb-3 btn btn-info">
-                        </div>
-                    </form>
-                </div>
+        <div class="container">
+            <hr>
+            <div class="row justify-content-around my-5">
+                <div class="col-lg-4 col-xs-4">  <!-- Column that holds search and add-->
 
-                <!-- Adding A Custom Coffee Section -->
-                <div class="mt-5">
-                    <form>
-                        <h2 class="mb-4">Add A Coffee</h2>
-                        <div id="add-bar row">
-                            <div class="col">
-                                <label for="adding-roast-selection">Roast</label>
-                                <select class="form-control" id="adding-roast-selection">
-                                    <option value="light" selected>Light</option>
+                    <!-- Choosing a Coffee Section -->
+                    <div>
+                        <form>
+                            <div id="searchbar" class="py-2 px-3">
+                                <label for="roast-selection"></label>
+                                <select id="roast-selection" class="form-control mb-3">
+                                    <option value="all">All</option>
+                                    <option value="light">Light</option>
                                     <option value="medium">Medium</option>
                                     <option value="dark">Dark</option>
                                 </select>
+                                <label for="search-field" class="d-none"></label>
+                                <input id="search-field" class="form-control mb-3" type="text" placeholder="Search..." name="search-field">
+                                <input id="submit" type="submit" class="form-control mb-3 btn btn-info">
                             </div>
+                        </form>
+                    </div>
 
-                            <div class="col">
-                                <label for="add-coffee-name">Name</label>
-                                <input class="form-control" type="text" id="add-coffee-name" name="add-coffee-name">
+                    <!-- Adding A Custom Coffee Section -->
+                    <div class="mt-5">
+                        <form>
+                            <h2 class="mb-4">Add A Coffee</h2>
+                            <div id="add-bar row">
+                                <div class="col">
+                                    <label for="adding-roast-selection">Roast</label>
+                                    <select class="form-control" id="adding-roast-selection">
+                                        <option value="light" selected>Light</option>
+                                        <option value="medium">Medium</option>
+                                        <option value="dark">Dark</option>
+                                    </select>
+                                </div>
+
+                                <div class="col">
+                                    <label for="add-coffee-name">Name</label>
+                                    <input class="form-control" type="text" id="add-coffee-name" name="add-coffee-name">
+                                </div>
+
+                                <button id="add-coffee-btn" class="btn btn-info">Add Coffee</button>
                             </div>
-
-                            <button id="add-coffee-btn" class="btn btn-info">Add Coffee</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
-            <!-- Coffee List -->
-            <div class="coffeelist my-1 col-lg-6 col-xs-12">
-                <div>
-                    <div class="row my-4 pb-3">
-                        <h2 class="col">NAME</h2>
-                        <h2 class="col">ROAST</h2>
+                        </form>
                     </div>
                 </div>
-                <div id="coffees"></div>
+
+                <!-- Coffee List -->
+                <div class="coffee-list my-1 col-lg-6 col-xs-12 px-5 py-4">
+                    <div>
+                        <div class="row my-4 pb-3">
+                            <h2 class="col text-center coffee-name-header">NAME</h2>
+                            <h2 class="col text-center coffee-roast-header">ROAST</h2>
+                        </div>
+                    </div>
+                    <div id="coffees"></div>
+                </div>
             </div>
         </div>
-        </div>
+
+
+
+
+    </div>
 
     <!-- Bootstrap/jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

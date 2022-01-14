@@ -4,7 +4,7 @@
 }
 
 hr{
-    height: 5px;
+    margin-top: 30px;
 }
 
 body {
@@ -37,7 +37,6 @@ h2, h3, h4{
 
 .row{
     font-family: 'Mochiy Pop P One', sans-serif;
-
 }
 
 input {
@@ -54,6 +53,19 @@ button {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
 
-.coffeelist {
+.coffee-list {
     background-color: whitesmoke;
+    border-radius: 10px;
 }
+
+.coffee-item {
+    border-bottom: 1px solid lightgray;
+}
+
+/*.coffee-name-header {*/
+/*   */
+/*}*/
+
+/*.coffee-roast-header {*/
+
+/*}*/
