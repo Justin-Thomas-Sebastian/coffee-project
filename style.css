@@ -1,9 +1,56 @@
-table {
+.jumbotron {
+    background-image: url("https://media0.giphy.com/media/RiQwP7SRR9kZ1WEfES/giphy.gif");
+    background-position: top;
+}
+hr{
+    height: 5px;
+}
+
+body {
+    background-color: #e6ccb2;
+}
+
+div {
     border-collapse: collapse;
     margin: 15px 0;
 }
 
-td, th {
-    border: 1px solid black;
-    padding: 5px 10px;
+h1 {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    font-size: 100px;
+    color: #9C6644;
 }
+
+h2{
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+
+#searchbar {
+    background-color: #7f5539;
+    border-color: #e6ccb2;
+    border-radius: 10px;
+    border-style: double;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.row{
+    font-family: 'Mochiy Pop P One', sans-serif;
+
+}
+
+input {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #9C6644;
+}
+
+button {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    color: #9C6644;
+}
+
+#add-coffee-name, #adding-roast-selection {
+    font-family: 'Mochiy Pop P One', sans-serif;
+}
+

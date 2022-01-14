@@ -3,52 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="style.css">
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Mochiy+Pop+P+One&family=Montserrat:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
 </head>
-<body>
-    <h1>Coffee!</h1>
-
-    <form>
-        <div id="searchbar">
-            <label for="roast-selection"></label>
-            <select id="roast-selection">
-                <option value="all">All</option>
-                <option value="light">Light</option>
-                <option value="medium">Medium</option>
-                <option value="dark">Dark</option>
-            </select>
-            <input id="search-field" type="text" placeholder="Search..." name="search-field">
-            <input id="submit" type="submit"/>
-        </div>
-    </form>
-
-    <div>
-        <div>
-            <div class="row">
-                <h2 class="col">NAME</h2>
-                <p class="col">ROAST</p>
-            </div>
-        </div>
-        <div id="coffees"></div>
+<body class="container text-center">
+    <div class="jumbotron bg-transparent">
+        <h1>Coffee!</h1>
     </div>
 
-    <form>
-        <div id="add-bar row">
-            <div class="col">
-                <label for="add-coffee-roast">Roast</label>
-                <input type="text" id="add-coffee-roast"  name="add-coffee-roast">
-            </div>
+<hr>
 
-            <div class="col">
-                <label for="add-coffee-name">Name</label>
-                <input type="text" id="add-coffee-name"  name="add-coffee-name">
+<!--    Choosing a Coffee Section-->
+    <div class="float-left">
+        <form>
+            <div id="searchbar">
+                <label for="roast-selection"></label>
+                <select id="roast-selection">
+                    <option value="all">All</option>
+                    <option value="light">Light</option>
+                    <option value="medium">Medium</option>
+                    <option value="dark">Dark</option>
+                </select>
+                <input id="search-field" type="text" placeholder="Search..." name="search-field">
+                <input id="submit" type="submit"/>
             </div>
+        </form>
 
-            <button id="add-coffee-btn">Add Coffee</button>
+        <div>
+            <div>
+                <div class="row">
+                    <h2 class="col">NAME</h2>
+                    <p class="col">ROAST</p>
+                </div>
+            </div>
+            <div id="coffees"></div>
         </div>
-    </form>
+    </div>
+
+<hr>
+
+<!--    Adding A Custom Coffee Section     -->
+    <div class="float-right">
+        <form>
+            <h2>Add A Coffee</h2>
+            <div id="add-bar row">
+                <div class="col">
+                    <label for="adding-roast-selection">Roast</label>
+                    <select class="form-control" id="adding-roast-selection">
+                        <option value="light">Light</option>
+                        <option value="medium">Medium</option>
+                        <option value="dark">Dark</option>
+                    </select>
+                </div>
+
+                <div class="col">
+                    <label for="add-coffee-name">Name</label>
+                    <input class="form-control" type="text" id="add-coffee-name"  name="add-coffee-name">
+                </div>
+
+                <button id="add-coffee-btn">Add Coffee</button>
+            </div>
+        </form>
+    </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
