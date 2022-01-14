@@ -1,5 +1,18 @@
 "use strict"
 
+let delay = 3000; // delay time in milliseconds
+let timeoutId = setTimeout(function () {
+    // alert('Welcome to Coffee!');
+    let loading = document.getElementById("loading");
+    loading.className = "d-none";
+    let mainPage = document.getElementById("main-page");
+    mainPage.className = "d-block container text-center";
+}, delay);
+
+// to cancel the timeout, you can call
+// clearTimeout(timeoutId);
+// prior to the delay expiring
+
 // builds HTML structure of coffee element
 function renderCoffee(coffee) {
     let html = '<div class="coffee row">';
