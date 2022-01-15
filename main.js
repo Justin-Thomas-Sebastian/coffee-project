@@ -63,9 +63,9 @@ function searchCoffees(e) {
     searchName = searchName.toLowerCase();
 
     coffees.forEach(function (coffee) {
-        if (coffee.name.toLowerCase() === searchName) { // matches completely
-            filteredCoffees.push(coffee);
-        }
+        // if (coffee.name.toLowerCase() === searchName) { // matches completely
+        //     filteredCoffees.push(coffee);
+        // }
 
         if (coffee.name.toLowerCase().startsWith(searchName)) { // partial match
             filteredCoffees.push(coffee);
