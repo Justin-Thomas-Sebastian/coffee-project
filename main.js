@@ -1,7 +1,7 @@
 "use strict"
 
 // loading screen delay
-let delay = 2500; // delay time in milliseconds
+let delay = 3000; // delay time in milliseconds
 let timeoutId = setTimeout(function () {
     // alert('Welcome to Coffee!');
     let loading = document.getElementById("loading");
