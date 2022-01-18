@@ -36,11 +36,11 @@ function updateCoffees(e) {
     let filteredCoffees = [];
 
     if(selectedRoast === "all"){
-        tbody.innerHTML = renderCoffees(coffees);
+        tbody.innerHTML = renderCoffees(coffeesData);
         return;
     }
 
-    coffees.forEach(function(coffee) {
+    coffeesData.forEach(function(coffee) {
         if (coffee.roast === selectedRoast) {   // light/ medium/ dark
             filteredCoffees.push(coffee);
         }
@@ -56,13 +56,13 @@ function searchCoffees(e) {
     let filteredCoffees = [];
 
     if (searchName === "") {  // revert to entire list when search input is empty
-        tbody.innerHTML = renderCoffees(coffees);
+        tbody.innerHTML = renderCoffees(coffeesData);
         return;
     }
 
     searchName = searchName.toLowerCase();
 
-    coffees.forEach(function (coffee) {
+    coffeesData.forEach(function (coffee) {
         // if (coffee.name.toLowerCase() === searchName) { // matches completely
         //     filteredCoffees.push(coffee);
         // }
@@ -70,6 +70,7 @@ function searchCoffees(e) {
         if (coffee.name.toLowerCase().startsWith(searchName)) { // partial match
             filteredCoffees.push(coffee);
         }
+
     });
 
     tbody.innerHTML = renderCoffees(filteredCoffees);
@@ -79,17 +80,29 @@ function searchCoffees(e) {
 function addCoffee(e){
     e.preventDefault();
 
-    let currentName = newName.value;
-    let currentRoast = newRoast.value;
-    let newCoffee = document.createElement("div");
+    // let currentName = newName.value;
+    // let currentRoast = newRoast.value;
+    // let newCoffee = document.createElement("div");
+    //
+    // let html = '<div class="coffee row coffee-item">';
+    // html += '<h4 class="col text-left">' + currentName + '</h4>';
+    // html += '<p class="col text-right">' + currentRoast + '</p>';
+    // html += '</div>';
+    //
+    // newCoffee.innerHTML = html;
+    // tbody.appendChild(newCoffee);
 
-    let html = '<div class="coffee row coffee-item">';
-    html += '<h4 class="col text-left">' + currentName + '</h4>';
-    html += '<p class="col text-right">' + currentRoast + '</p>';
-    html += '</div>';
+    let newCoffee = {
+        id: coffeesData[coffeesData.length - 1].id + 1,   //gets id of last element then add 1
+        name: newName.value,
+        roast: newRoast.value
+    };
 
-    newCoffee.innerHTML = html;
-    tbody.appendChild(newCoffee);
+    coffees.push(newCoffee);
+    localStorage.setItem("localCoffees", JSON.stringify(coffees));  // save to local
+    coffeesData = JSON.parse(localStorage.getItem("localCoffees")); // retrieve from local
+
+    tbody.innerHTML = renderCoffees(coffeesData);  // render
 }
 
 // from http://www.ncausa.org/About-Coffee/Coffee-Roasts-Guide
@@ -119,7 +132,19 @@ let newRoast = document.getElementById("adding-roast-selection");
 let newName = document.getElementById("add-coffee-name");
 let addButton = document.getElementById("add-coffee-btn");
 
-tbody.innerHTML = renderCoffees(coffees); // initial render of all coffees
+let coffeesData; // local storage array of coffees
+
+// Initialize or retrieve localStorage
+if(!localStorage || localStorage.length === 0){  // localStorage is not yet initialized
+    localStorage.setItem("localCoffees", JSON.stringify(coffees));
+    coffeesData = JSON.parse(localStorage.getItem("localCoffees"));
+    tbody.innerHTML = renderCoffees(coffeesData);
+} else {
+    coffeesData = JSON.parse(localStorage.getItem("localCoffees"));
+    tbody.innerHTML = renderCoffees(coffeesData);
+}
+
+console.log(coffeesData);
 
 // DOM events
 roastSelection.addEventListener('change', updateCoffees);
