@@ -8,7 +8,7 @@ hr{
 }
 
 body {
-    background-color: #e6ccb2;
+    background-image: linear-gradient(to bottom, #e6ccb2, #9C6644);
 }
 
 div {
@@ -49,6 +49,15 @@ button {
     color: #9C6644;
 }
 
+#remove-coffee-btn {
+    color: black;
+    background-image: linear-gradient(to right, whitesmoke, #9C6644);
+}
+
+#submit, #add-coffee-btn {
+    background-image: linear-gradient(to right, dodgerblue, #17a2b8);
+}
+
 #add-coffee-name, #adding-roast-selection {
     font-family: 'Mochiy Pop P One', sans-serif;
 }
@@ -61,6 +70,59 @@ button {
 .coffee-item {
     border-bottom: 1px solid lightgray;
 }
+
+
+/*Fade Animation*/
+.fade-in {
+    animation: fadeIn ease 5s;
+    -webkit-animation: fadeIn ease 5s;
+    -moz-animation: fadeIn ease 5s;
+    -o-animation: fadeIn ease 5s;
+    -ms-animation: fadeIn ease 5s;
+}
+@keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }}
 
 /*.coffee-name-header {*/
 /*   */

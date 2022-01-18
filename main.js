@@ -131,7 +131,7 @@ let coffeeSearch = document.querySelector('#search-field')
 let newRoast = document.getElementById("adding-roast-selection");
 let newName = document.getElementById("add-coffee-name");
 let addButton = document.getElementById("add-coffee-btn");
-
+let removeButton = document.querySelector('#remove-coffee-btn');
 let coffeesData; // local storage array of coffees
 
 // Initialize or retrieve localStorage
@@ -144,7 +144,10 @@ if(!localStorage || localStorage.length === 0){  // localStorage is not yet init
     tbody.innerHTML = renderCoffees(coffeesData);
 }
 
-console.log(coffeesData);
+//Remove Items from Local Storage
+removeButton.addEventListener('click', function () {
+    localStorage.clear();
+})
 
 // DOM events
 roastSelection.addEventListener('change', updateCoffees);
