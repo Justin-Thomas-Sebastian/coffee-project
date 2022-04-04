@@ -3,36 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <title>Coffee Project</title>
-
     <!-- Boostrap 4.6 -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <!-- Custom CSS-->
     <link href="https://fonts.googleapis.com/css2?family=Abel&family=Anton&family=Mochiy+Pop+P+One&family=Montserrat:wght@300&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-
     <!-- Loading screen-->
     <div class="loading-page d-flex justify-content-center" id="loading">
         <img src="https://i.pinimg.com/originals/8d/da/aa/8ddaaa6c732debcbd43351d36de6bb49.gif" alt="coffee loading">
     </div>
-
     <!-- Main -->
     <div class="d-none container text-center" id="main-page">
         <div class="jumbotron mt-4">
             <h1 class="fade-in">Coffee!</h1>
         </div>
-
         <!-- Search, Add, Coffee List-->
         <div class="container">
             <hr>
             <div class="row justify-content-around my-5">
                 <div class="col-lg-4 col-xs-12">  <!-- Column that holds search and add-->
-
                     <!-- Choosing a Coffee Section -->
                     <div>
                         <form>
@@ -50,7 +44,6 @@
                             </div>
                         </form>
                     </div>
-
                     <!-- Adding A Custom Coffee Section -->
                     <div class="mt-5">
                         <form>
@@ -64,19 +57,16 @@
                                         <option value="dark">Dark</option>
                                     </select>
                                 </div>
-
                                 <div class="col">
                                     <label for="add-coffee-name">Name</label>
                                     <input class="form-control" type="text" id="add-coffee-name" name="add-coffee-name">
                                 </div>
-
                                 <button id="add-coffee-btn" class="btn btn-info">Add Coffee</button>
                                 <button id="remove-coffee-btn" class="btn btn-info">Clear All</button>
                             </div>
                         </form>
                     </div>
                 </div>
-
                 <!-- Coffee List -->
                 <div class="fade-in coffee-list my-1 col-lg-6 col-xs-12 px-5 py-4">
                     <div>
@@ -90,11 +80,9 @@
             </div>
         </div>
     </div>
-
     <!-- Bootstrap/jQuery -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
-
     <script src="main.js"></script>
 </body>
 </html>
